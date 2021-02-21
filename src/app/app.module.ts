@@ -6,11 +6,12 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppRoutingModule } from './app.routing';
-import { ComponentsModule } from './components/components.module';
+// import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   imports: [
@@ -18,14 +19,13 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    SharedModule,
+    AdminLayoutModule,
   ],
   declarations: [
-    AppComponent,
-    AdminLayoutComponent,
-
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

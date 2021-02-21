@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Chartist from 'chartist';
+// import * as Chartist from 'chartist';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
               dur: 700,
               from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
               to: data.path.clone().stringify(),
-              easing: Chartist.Svg.Easing.easeOutQuint
+              // easing: Chartist.Svg.Easing.easeOutQuint
             }
           });
         } else if(data.type === 'point') {
@@ -76,17 +76,17 @@ export class DashboardComponent implements OnInit {
       };
 
      const optionsDailySalesChart: any = {
-          lineSmooth: Chartist.Interpolation.cardinal({
-              tension: 0
-          }),
+          // lineSmooth: Chartist.Interpolation.cardinal({
+          //     tension: 0
+          // }),
           low: 0,
           high: 50, // we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
       }
 
-      var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
+      // var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
-      this.startAnimationForLineChart(dailySalesChart);
+      // this.startAnimationForLineChart(dailySalesChart);
 
 
       /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
@@ -99,18 +99,18 @@ export class DashboardComponent implements OnInit {
       };
 
      const optionsCompletedTasksChart: any = {
-          lineSmooth: Chartist.Interpolation.cardinal({
-              tension: 0
-          }),
+          // lineSmooth: Chartist.Interpolation.cardinal({
+          //     tension: 0
+          // }),
           low: 0,
           high: 1000, // we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: { top: 0, right: 0, bottom: 0, left: 0}
       }
 
-      var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
+      // var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
 
       // start animation for the Completed Tasks Chart - Line Chart
-      this.startAnimationForLineChart(completedTasksChart);
+      // this.startAnimationForLineChart(completedTasksChart);
 
 
 
@@ -141,10 +141,10 @@ export class DashboardComponent implements OnInit {
           }
         }]
       ];
-      var websiteViewsChart = new Chartist.Bar('#websiteViewsChart', datawebsiteViewsChart, optionswebsiteViewsChart, responsiveOptions);
+      // var websiteViewsChart = new Chartist.Bar('#websiteViewsChart', datawebsiteViewsChart, optionswebsiteViewsChart, responsiveOptions);
 
       //start animation for the Emails Subscription Chart
-      this.startAnimationForBarChart(websiteViewsChart);
+      // this.startAnimationForBarChart(websiteViewsChart);
   }
 
 }
