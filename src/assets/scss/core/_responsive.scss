@@ -262,7 +262,7 @@
 
   .index-page{
     .cd-section{
-      .tim-typo .tim-note{
+      .mjs-typo .mjs-note{
         width: 60px;
       }
     }
@@ -746,6 +746,7 @@
         display: none;
     }
     .navbar-fixed-top {
+        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
     }
     #bodyClick {
